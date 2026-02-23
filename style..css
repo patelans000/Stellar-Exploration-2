@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #06060e;
+  font-family: monospace;
+  color: white;
+}
+
+#tooltip {
+  position: fixed;
+  pointer-events: none;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 5px;
+  padding: 10px 14px;
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: nowrap;
+  backdrop-filter: blur(6px);
+  transition: opacity 0.15s;
+}
+
+#tooltip.hidden { opacity: 0; }
+
+.tt-name {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+
+.tt-row {
+  color: rgba(255,255,255,0.55);
+}
+
+.tt-row span {
+  display: inline-block;
+  width: 90px;
+  color: rgba(255,255,255,0.35);
+}
