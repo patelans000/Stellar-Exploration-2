@@ -43,10 +43,10 @@ let pos = {};
 let bgDots = [];
 
 const STAGE_TEXT = [
-  "Our star — the Sun",
-  "Nearby stars, light-years away",
-  "Our stellar neighborhood",
-  "A fraction of our galaxy"
+  "Our star, the Sun.",
+  "Nearby stars, light-years away...",
+  "Our stellar neighborhood.",
+  "We are but a fraction of our galaxy."
 ];
 let stageIdx = -1, stageTimer = 0;
 
@@ -232,7 +232,6 @@ function drawSun(titleMode) {
 function drawAllStars(alpha) {
   let hoveredStar = null;
 
-  // CHANGE: removed radial lines — only tick marks on the rings remain
   for (let i = 0; i < stars.length; i++) {
     let s = stars[i];
     let p = pos[i];
@@ -473,7 +472,6 @@ function touchMoved() {
 function showTooltip(s) {
   let el = document.getElementById("tip");
   if (!s) {
-    // Only hide if sun isn't being hovered — sun check in doExplore runs after this
     let _ssx = width/2 + camX;
     let _ssy = height/2 + camY;
     let _sunR = max(starRadius(1.0) * 3 * zoom, 10);
