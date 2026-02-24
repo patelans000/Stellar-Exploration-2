@@ -1,13 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Star Map</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Stellar Exploration</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;1,200&family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="tooltip" class="hidden"></div>
-  <script src="sketch.js"></script>
+
+<div id="title-ui">
+  <div class="eyebrow">An Exploratory Map of Nearby Stars</div>
+  <div class="headline">The Scale of<br>Our Universe</div>
+  <div class="sub">Click the Sun to begin!</div>
+  <div class="arrow">↓</div>
+</div>
+
+<div id="hints">
+  <div class="hint" id="hint-zoom"><b>↕</b> <span id="hint-zoom-text">Scroll to zoom</span></div>
+  <div class="hint"><b>⊕</b> Drag to explore</div>
+</div>
+
+<div id="stage"></div>
+
+<div id="scalebar">
+  <div id="track"><div id="fill"></div></div>
+  <div id="scalelabels"><span>NEAR</span><span>MID</span><span>FAR</span></div>
+</div>
+
+<div id="homebtn">⌂ &nbsp;Return to Sun</div>
+<div id="tip" class="hidden"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+<script src="sketch.js"></script>
 </body>
 </html>
