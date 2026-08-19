@@ -577,6 +577,15 @@ function mouseDragged() {
 }
 
 function mouseWheel(e) {
+  if (STATE === "title") {
+    if (e.delta > 0) {
+      STATE = "transition";
+      transitionT = 0;
+      document.getElementById("title-ui").classList.add("fade-out");
+    }
+    return false;
+  }
+
   if (!scrollOn) return false;
   let f = e.delta > 0 ? 0.88 : 1.13;
   if (zoom < 0.03) f = e.delta > 0 ? 0.93 : 1.07;
